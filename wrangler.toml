@@ -1,9 +1,7 @@
-# 基础必配
-name = "你的项目名"
-compatibility_date = "2026-02-01" # 写最新日期即可
-main = "src/index.js" # 关键：指定入口文件为根目录的index.js
+# 核心配置（兼容日期改为 Cloudflare 支持的有效值）
+name = "blog-muxiaoxi-wap"
+main = "src/index.js"
+compatibility_date = "2026-02-01" 
 
-# 新版静态资产配置（替换旧[site]）
-[assets]
-binding = "MY_ASSETS" # 和index.js中调用的一致
-directory = "./dist" # 静态资源目录
+# 静态资源配置（目录+路由规则，匹配你的 index.js 转发逻辑）
+assets = { directory = "./dist", binding = "ASSETS" }
