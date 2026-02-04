@@ -1,5 +1,7 @@
+# 核心配置（兼容日期改为 Cloudflare 支持的有效值）
 name = "blog-muxiaoxi-wap"
-compatibility_date = "2026-02-01"
+main = "src/index.js"
+compatibility_date = "2026-02-01" 
 
-[site]
-bucket = "./dist"
+# 静态资源配置（目录+路由规则，匹配你的 index.js 转发逻辑）
+assets = { directory = "./dist", binding = "ASSETS" }
